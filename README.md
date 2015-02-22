@@ -8,7 +8,7 @@ Check if there are a update on github repository.
 ![](https://raw.githubusercontent.com/cedced19/check-update-github/master/demo.png)
 
 ```bash
-npm install --save check-update
+npm install --save check-update-github
 ```
 
 ## Example
