@@ -28,4 +28,17 @@ describe('checkUpdate', function () {
       }
     });
   });
+  
+  it('should check for update and display the version', function () {
+    checkUpdate({
+      name: 'check-update-tester',
+      currentVersion: '0.0.2',
+      user: 'cedced19',
+      branch: 'master'
+    }, function (err, lastestVersion) {
+      if (!err) {
+        console.log(lastestVersion);
+      }
+    });
+  });
 });

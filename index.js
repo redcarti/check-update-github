@@ -10,12 +10,16 @@ var defaultMessage = function (options) {
 };
 module.exports = function (options, cb) {
   latest(options, function (err, latestVersion) {
-    if (err) {
-      cb(err);
-      return;
-    }
     options.latestVersion = latestVersion;
-    cb(null, latestVersion, defaultMessage(options));
-    return;
+    if (err) {
+        cb(err);
+        return;
+    } else if (options.currentVersion == undefined){
+        cb(null, latestVersion, null);
+        return;
+    } else {
+        cb(null, latestVersion, defaultMessage(options));
+        return;
+    }
   });
 };

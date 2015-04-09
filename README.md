@@ -36,16 +36,25 @@ checkUpdate({
 *Required*  
 Type: `string`
 
+Define the package name for search in Github.
+
 #### currentVersion
 
-*Required*  
+*Required if you want a default message*  
 Type: `string`
+
+Define the version currently installed.
 
 #### user
 
 *Required*  
 Type: `string`
 
+Define the github acount for search in Github.
+
 #### branch
 
 Type: `string`
+Default: `master`
+
+Define the git branch for search in Github.
