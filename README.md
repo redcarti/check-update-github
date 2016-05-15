@@ -1,6 +1,6 @@
 # check-update-github
 
-Check if there are a update on github repository.
+Check if there is an update on a github repository.
 
 [![Build Status](https://travis-ci.org/cedced19/check-update-github.svg?branch=master)](https://travis-ci.org/cedced19/check-update-github)
 [![NPM version](https://badge.fury.io/js/check-update-github.svg)](http://badge.fury.io/js/check-update-github)

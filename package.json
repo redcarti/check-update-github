@@ -1,7 +1,7 @@
 {
   "name": "check-update-github",
   "version": "0.0.4",
-  "description": "Check if there are a update",
+  "description": "Check if there is an update on a github repository.",
   "main": "index.js",
   "dependencies": {
     "colors": "^1.0.3",
