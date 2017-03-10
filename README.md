@@ -20,7 +20,7 @@ var pkg = require('./package.json');
 checkUpdate({
     name: pkg.name, 
     currentVersion: pkg.version, 
-    user: 'your-github-accound',
+    user: 'your-github-account',
     branch: 'master'
     }, function(err, latestVersion, defaultMessage){
     if(!err){
