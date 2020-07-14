@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 var latest = require('./lib/latest-version.js');
-var defaultMessage = function (options) {
+var needToUpd = function (options) {
   if (options.latestVersion == options.currentVersion) {
-    return 'You have the latest version of ' + options.name + ' (current: ' + options.currentVersion + ')';
+    return false;
   } else {
-    return 'Update available: ' + options.latestVersion + ' (current: ' + options.currentVersion + ')';
+    return true;
   }
 };
 module.exports = function (options, cb) {
@@ -18,7 +18,7 @@ module.exports = function (options, cb) {
         cb(null, latestVersion, null);
         return;
     } else {
-        cb(null, latestVersion, defaultMessage(options));
+        cb(null, latestVersion, needToUpd(options));
         return;
     }
   });
