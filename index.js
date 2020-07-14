@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
-var latest = require('./lib/latest-version.js'), colors = require('colors');
+var latest = require('./lib/latest-version.js');
 var defaultMessage = function (options) {
   if (options.latestVersion == options.currentVersion) {
-    return 'You have the latest version of ' + colors.green(options.name) + colors.dim(' (current: ' + options.currentVersion + ')');
+    return 'You have the latest version of ' + options.name + ' (current: ' + options.currentVersion + ')';
   } else {
-    return 'Update available: ' + colors.green(options.latestVersion) + colors.dim(' (current: ' + options.currentVersion + ')');
+    return 'Update available: ' + options.latestVersion + ' (current: ' + options.currentVersion + ')';
   }
 };
 module.exports = function (options, cb) {
